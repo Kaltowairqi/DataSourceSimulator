@@ -1,0 +1,29 @@
+﻿<Application x:Class="DataSourceSimulator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DataSourceSimulator"
+             xmlns:uc="clr-namespace:DataSourceSimulator.UserControls.Views"
+             xmlns:ucvm="clr-namespace:DataSourceSimulator.UserControls.ViewModels"
+             StartupUri="DataSourceView.xaml">
+    
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            
+            <DataTemplate DataType="{x:Type local:InformationViewModel}">
+                <uc:InformationView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ucvm:DestinationInfoViewModel}">
+                <uc:DestinationInfoView Margin="5"/>
+            </DataTemplate>
+        </ResourceDictionary>
+   
+
+    </Application.Resources>
+    
+</Application>

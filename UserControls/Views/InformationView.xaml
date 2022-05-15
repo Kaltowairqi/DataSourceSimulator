@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="DataSourceSimulator.UserControls.Views.InformationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataSourceSimulator"
+             mc:Ignorable="d" 
+             d:DesignHeight="110" d:DesignWidth="220">
+    <Grid>
+
+        <Border Grid.Row="0" Style="{StaticResource UserControlBordarStyle}" Margin="2">
+
+            <StackPanel Margin="5 2" >
+
+                <TextBlock FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" Foreground="White">Information</TextBlock>
+
+                <!--Source Name-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="White">Source Name:</TextBlock>
+                    <TextBlock Text="{Binding SourceName}" Foreground="White" Margin="2 0"></TextBlock>
+                </StackPanel>
+
+                <!--Lesinting Port-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="White">Lesinting Port:</TextBlock>
+                    <TextBlock Margin="3 0" Text="{Binding LestiningPort}" Foreground="White"/>
+                </StackPanel>
+
+                <!--Statues-->
+                <StackPanel Margin="0 0 0 5" Orientation="Horizontal">
+                    <TextBlock Foreground="White">Statues:</TextBlock>
+                    <TextBlock Margin="3 0" Text="{Binding Statues}" Foreground="White"/>
+                </StackPanel>
+
+                 
+            
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+    
+</UserControl>

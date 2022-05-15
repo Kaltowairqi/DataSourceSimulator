@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="DataSourceSimulator.UserControls.Views.StatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataSourceSimulator.UserControls.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="625">
+
+    <Border Grid.Row="0" Style="{StaticResource UserControlBordarStyle}">
+      
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="100" MaxWidth="199"/>
+                <ColumnDefinition MinWidth="100"/>
+                <ColumnDefinition MinWidth="100"/>
+                <ColumnDefinition MinWidth="20" MaxWidth="170"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Number Of Sent Packtes -->
+            <Border Grid.Column="0" Margin="12">
+
+                <StackPanel Height="100">
+                    <TextBlock FontSize="16" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold">Sent Packts:</TextBlock>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock FontSize="20" Text="{Binding NumberOfSentPackts}" Foreground="White" Width="45" FontWeight="Bold" Margin="2"/>
+                        <TextBlock FontSize="20" FontWeight="Bold" Text="Pckts" Margin="2" Foreground="White" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- Number Of Received Acks -->
+            <Border Grid.Column="1" Margin="12">
+
+                <StackPanel Height="100">
+
+                    <TextBlock FontSize="16" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White">
+                                   Received Acks:
+                    </TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock FontSize="20" Text="{Binding NumberOfReceivedAKCs}" Foreground="White" Width="45" FontWeight="Bold" Margin="2"/>
+                        <TextBlock FontSize="20" FontWeight="Bold" Text="AKCs" Margin="2" Foreground="White" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+
+            <!--Bytes Sent-->
+            <Border Grid.Column="2" Margin="12">
+
+                <StackPanel Height="100">
+                    <TextBlock FontSize="16" HorizontalAlignment="Center" FontWeight="Bold" Text="Bytes Sent:" Foreground="White"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock FontSize="20" Text="{Binding ByetsSent}" Width="45" Foreground="White" FontWeight="Bold" Margin="2"/>
+                        <TextBlock FontSize="20" FontWeight="Bold" Text="Byets" Margin="2" Foreground="White" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Border>
+
+            <!-- Delay -->
+            <Border Grid.Column="3" Margin="12">
+                <StackPanel Height="100">
+                    <TextBlock FontSize="16" HorizontalAlignment="Center" FontWeight="Bold" Text="Delay (avg.):" Foreground="White"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <TextBlock FontSize="20" Text="{Binding AverageOfDelay}" Width="45"  FontWeight="Bold" Margin="2" Foreground="White"/>
+                        <TextBlock FontSize="20" FontWeight="Bold" Text="Sec" Margin="2" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+    </Border>
+    
+</UserControl>

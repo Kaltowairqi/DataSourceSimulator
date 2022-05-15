@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="DataSourceSimulator.UserControls.Views.DestinationsSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataSourceSimulator.UserControls.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="450">
+
+   
+        <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#282828"/>
+        </Grid.Background>
+        
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+            <!-- Main Frame: Collection of User Controls to be added dynamiclly-->
+            <Border Grid.Row="0" Margin="10">
+                <ItemsControl ItemsSource="{Binding DestinationInfoViewModels}"/>
+            </Border>
+
+            <!--Down Frame: Buttons-->
+            <Border Grid.Row="1">
+                
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" FontSize="14" FontWeight="Bold"  Margin="5 7" Style="{StaticResource ButtonStyle}" Command="{Binding AddDestinationCommand}">Add Destination</Button>
+
+                    <Button Grid.Column="1" FontSize="14" FontWeight="Bold"  Margin="5 7" Style="{StaticResource ButtonStyle}" Command="{Binding ResetCommand}">Reset</Button>  
+
+                    <Button Grid.Column="2" FontSize="20" FontWeight="Bold"  Margin="5 7" Style="{StaticResource ButtonStyle}" Command="{Binding SaveDestinationsInfoCommand}">Save</Button>
+                
+                </Grid>
+            
+            </Border>
+        
+
+        </Grid>
+
+</UserControl>
